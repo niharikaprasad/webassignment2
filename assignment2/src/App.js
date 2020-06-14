@@ -1,24 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Quizapp</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://kit.fontawesome.com/yourcode.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<link href="style.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
-</head>
-<body>
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+import './index.css';
+import './fonts.css';
 
-<!-- Navigation -->
-<nav class = "navbar navbar-expand-md navbar-light bg-light sticky-top" >
+
+
+function App() {
+  return (
+
+    <div className="App">
+      <nav class = "navbar navbar-expand-md navbar-light bg-light sticky-top" >
 	<div class="container-fluid">
-		<a class="navbar-brand" href = "#"><img src = "img/logo.png"></a>
+		<a class="navbar-brand" href = "#"><img src = "img/logo.png"/></a>
 		<button class="navbar-toggler" type ="button" data-toggler = "collapse"
 		data-target = "#navbarResponsive">
 		<span class="navbar-toggler-icon"></span>
@@ -43,34 +37,10 @@
 	
 </nav>
 
-<!--- Image Slider -->
-<!-- <div id  ="slides" class = "carousel slide" data-ride= "carousel">
-	<ul class="carousel-indicators">
-		<li data-target="#slides" data-slide-to="0" class = "active"></li>
-		<li data-target="#slides" data-slide-to="1" ></li>
-		<li data-target="#slides" data-slide-to="2" ></li>
 
-	</ul>
-	<div class = "carousel-inner">
-	<div class = "carousel-item active">
-		<img src = "img/back1.jpg">
-		<div class="carousel-caption">
-			<h1 class= "display-2">Quizapp</h1>
-			<h3>Best E-Learning tool</h3>
-			<button type ="button" class="btn btn-outline-light btn-lg">Login</button>
-		</div>
-	</div>
-	<div class = "carousel-item">
-		<img src = "img/back2.jpg">
-	</div>
-	<div class = "carousel-item">
-		<img src = "img/back3.jpg">
-	</div>
-	</div>
-</div> -->
 <div>
 	<div class = "carousel-item active">
-		<img src = "img/back1.jpg"> 
+		<img src = "img/back1.jpg"/> 
 		<div class="carousel-caption">
 			<h1 class= "display-2">Quizapp</h1>
 			<h3>Best E-Learning tool</h3>
@@ -79,61 +49,41 @@
 	</div>
 </div>
 
-<!--- Jumbotron -->
 <div class ="container-fluid row jumbotron" >
 <p class ="lead text-center padding" >Welcome to Quizapp, QuizApp is a collaborative learning management tool whose primary purpose is for instructors and teachers to create quizzes. Students can take quizzes to earn grades and accreditation.</p>
 </div>
 
-<!--- Welcome Section -->
-
-
-<!--- Three Column Section -->
 <div class ="container-fluid padding">
 	<div class="row text-center padding">
 		<div class = "col-xs-12 col-sm-6 col-md-4">
-			<img src ="img/classroom.png" style="size: 70px;">
+			<img src ="img/classroom.png" />
 			<h3>Create classrooms</h3>
 			<p>Create a classroom for students who take the course and enroll multiple students in the class.</p>
 		</div>
 		<div class = "col-xs-12 col-sm-6 col-md-4">
-			<img src ="img/quiz.png">
+			<img src ="img/quiz.png"/>
 			<h3>Publish quizes</h3>
 			<p>Create interactive and customised quizes. Autograding is here to save your time</p>
 		</div>
 		<div class = "col-xs-12 col-md-4">
-			<img src ="img/certificate.png">
+			<img src ="img/certificate.png"/>
 			<h3>Earn accreditation</h3>
 			<p>Quiz takers can receive certificates with the course name, score and grade via email or download</p>
 		</div>
 	</div>
 </div>
 
-<!--- Two Column Section -->
 
-
-<!--- Fixed background -->
-<hr class = "my-4">
+<hr class = "my-4"/>
 <figure>
 	<div class ="fixed-wrap">
 		<div id = "fixed">
-			<img src = "img/mac.png">
+			<img src = "img/mac.png"/>
 		</div>
 	</div>
 </figure>
 
-<!--- Emoji Section -->
 
-  
-<!--- Meet the team -->
-
-
-<!--- Cards -->
-
-
-<!--- Two Column Section -->
-
-
-<!--- Connect -->
 <div class = "contianer-fluid padding">
 <div class = "row text-center padding">
 	<div class="col-12">
@@ -149,7 +99,6 @@
 </div>
 </div>
 
-<!--- Footer -->
 <div class="row mb-5">
 	<div class="col-12 text-center">
 		<h3 class="footer-heading mb-4">Contact Info</h3>
@@ -161,9 +110,8 @@
 	  </div>
 	</div>
 </div>
+  );
+   
+  }
 
-
-
-</body>
-</html>
-
+export default App;

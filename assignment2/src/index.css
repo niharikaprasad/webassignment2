@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');html, body{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+  
+  html, body{
   height: 100%;
   width: 100%;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   color: #222;
 
 }
@@ -63,7 +65,7 @@ figure {
   height: 100%;
 }
 #fixed {
-  background-image: url('img/mac.png');
+  background-image: url('/public/img/mac.png');
   position: fixed;
   display: block;
   top: 0;
@@ -101,6 +103,7 @@ Large (lg) devices (desktops, 992px and up)
 Extra (xl) large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
 */
+
 
 
 
