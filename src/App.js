@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <nav class = "navbar navbar-expand-md navbar-light bg-light sticky-top" >
 	<div class="container-fluid">
-		<a class="navbar-brand" href = "#"><img src = "img/logo.png"/></a>
+		<a class="navbar-brand" href = "#"><img src = {require('./logo.png')}/></a>
 		<button class="navbar-toggler" type ="button" data-toggler = "collapse"
 		data-target = "#navbarResponsive">
 		<span class="navbar-toggler-icon"></span>
@@ -40,7 +40,7 @@ function App() {
 
 <div>
 	<div class = "carousel-item active">
-		<img src = "img/back1.jpg"/> 
+		<img src = {require('./back1.jpg')}/> 
 		<div class="carousel-caption">
 			<h1 class= "display-2">Quizapp</h1>
 			<h3>Best E-Learning tool</h3>
@@ -56,17 +56,17 @@ function App() {
 <div class ="container-fluid padding">
 	<div class="row text-center padding">
 		<div class = "col-xs-12 col-sm-6 col-md-4">
-			<img src ="img/classroom.png" />
+			<img src ={require('./classroom.png')} />
 			<h3>Create classrooms</h3>
 			<p>Create a classroom for students who take the course and enroll multiple students in the class.</p>
 		</div>
 		<div class = "col-xs-12 col-sm-6 col-md-4">
-			<img src ="img/quiz.png"/>
+			<img src ={require('./quiz.png')}/>
 			<h3>Publish quizes</h3>
 			<p>Create interactive and customised quizes. Autograding is here to save your time</p>
 		</div>
 		<div class = "col-xs-12 col-md-4">
-			<img src ="img/certificate.png"/>
+			<img src ={require('./certificate.png')}/>
 			<h3>Earn accreditation</h3>
 			<p>Quiz takers can receive certificates with the course name, score and grade via email or download</p>
 		</div>
