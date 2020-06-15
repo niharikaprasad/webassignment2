@@ -123,10 +123,7 @@ class Quiz extends Component {
                 <h1>Quiz completed</h1>
                 <div class="row">
                   <div class="card">
-                    {/* <img
-                      class="card-img-top"
-                      src={require("./datacard.jpg")}
-                    /> */}
+                 
                     <div class="card-body">
                       <h5 class="card-title">CSCI48 Data Analytics</h5>
                       <p class="card-text">
