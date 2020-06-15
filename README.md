@@ -116,6 +116,8 @@ The code of Carousel caption in Home page is using Bootstrap [3] and referred fr
 
 The grid structure in Home page is made with help of https://www.youtube.com/watch?v=9cKsq14Kfsw
 
+I have added own images, icons , styling and content
+
 <div class="container-fluid padding">
           <div class="row text-center padding">
             <div class="col-xs-12 col-sm-6 col-md-4">
@@ -147,6 +149,7 @@ The grid structure in Home page is made with help of https://www.youtube.com/wat
 
 
 Cards structure in Classroom page is made from  https://getbootstrap.com/docs/4.0/components/card/
+Have addded own images, content and more interactive
 
  <div className="container h-100">
           <div class="row align-items-center h-100">
@@ -196,6 +199,53 @@ Cards structure in Classroom page is made from  https://getbootstrap.com/docs/4.
                   </div>
                 </div>
               </div>
+
+For validation : 
+Ben Awad, Form Validation in React.js - Part 11, Sep 21, 2018. Accessed on: June. 13, 2020. [Video file]. Available: https://www.youtube.com/watch?v=FM2RN8rHCTE
+
+I have changed the behaviour of the app from the source and made more interactive, also used difffernt fields
+
+ validate = () => {
+    let emailError = "";
+    let passwordError = "";
+
+    if (!this.state.password) {
+      passwordError = "Password cannot be blank";
+    }
+
+    if (!this.state.email.includes("@")) {
+      emailError = "Invalid email";
+    }
+
+    if (emailError || passwordError) {
+      this.setState({ emailError, passwordError });
+      return false;
+    }
+
+    return true;
+  };
+  handleChange = (event) => {
+    const isCheckbox = event.target.type === "checkbox";
+    this.setState({
+      [event.target.name]: isCheckbox
+        ? event.target.checked
+        : event.target.value,
+    });
+  };
+  handleSubmit = (event) => {
+    event.preventDefault();
+    const isValid = this.validate();
+    if (isValid) {
+      console.log(this.state);
+      // clear form
+      this.setState({
+        loginsuccess: true,
+      });
+    }
+  };
+
+
+
 
 For Quiz Component [4] I followed the following video: https://www.youtube.com/watch?v=ETNv7en7DBU
 
