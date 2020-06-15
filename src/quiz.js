@@ -130,7 +130,7 @@ class Quiz extends Component {
                     <div class="card-body">
                       <h5 class="card-title">CSCI48 Data Analytics</h5>
                       <p class="card-text">
-                      <h2>Final marks : {this.state.marks}</h2>
+                      <h2>Final marks : {this.state.marks +1}</h2>
                       </p>
                       <ul class="list-group list-group-flush">
                         <li class="list-group-item">Grade : A</li>
@@ -201,9 +201,8 @@ class Quiz extends Component {
               {" "}
               <hr class="my-4" />
               <h2>{question}</h2>
-              <span>{`Question ${currentIndex + 1} of ${
-                QuizData.length
-              }`}</span>
+              <hr class="my-4" />
+
               {options.map((
                 option
               ) => (
