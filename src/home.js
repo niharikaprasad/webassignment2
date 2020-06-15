@@ -41,7 +41,7 @@ class Home extends Component {
                 <li class="nav-item">
                 <Link class="nav-link" to="/quiz">
                     {" "}
-                    About us
+                    Quiz
                     </Link>
                 </li>
               </ul>
