@@ -13,11 +13,10 @@ class Login extends Component {
   state = initialState;
 
   validate = () => {
-    let nameError = "";
     let emailError = "";
     let passwordError = "";
 
-    if (!this.state.passwordError) {
+    if (!this.state.password) {
       passwordError = "Password cannot be blank";
     }
 
