@@ -5,14 +5,15 @@ import "./quiz.css";
 
 class Quiz extends Component {
   state = {
-    userAnswer: null, 
+    userAnswer: null,
     currentIndex: 0,
-    options: [], 
-    quizEnd: false, 
+    options: [],
+    quizEnd: false,
     marks: 0,
     disabled: true,
   };
 
+  // Author Kindson The Tech Pro, Step by Step Guide to Build a Quiz App in ReactJS (Fun Project for React Beginners), Apr 3, 2020. Accessed on: June. 13, 2020. [Video file]. Available: https://www.youtube.com/watch?v=ETNv7en7DBU
   loadQuiz = () => {
     const { currentIndex } = this.state;
     this.setState(() => {
@@ -76,7 +77,7 @@ class Quiz extends Component {
         <div className="home">
           <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
             <div class="container-fluid">
-              <Link class="navbar-brand" to= "/">
+              <Link class="navbar-brand" to="/">
                 <img src={require("./logo.png")} />
               </Link>
               <button
@@ -102,45 +103,42 @@ class Quiz extends Component {
                     </Link>
                   </li>
                   <li class="nav-item">
-                  <Link class="nav-link" to="/classroom">
-                    {" "}
-                    Classroom
-                  </Link>
-                </li>
-                <li class="nav-item active">
-                <Link class="nav-link" to="/quiz">
-                    {" "}
-                    Quiz
+                    <Link class="nav-link" to="/classroom">
+                      {" "}
+                      Classroom
                     </Link>
-                </li>
+                  </li>
+                  <li class="nav-item active">
+                    <Link class="nav-link" to="/quiz">
+                      {" "}
+                      Quiz
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
           </nav>
           <div className="container h-100">
-          <div class="row align-items-center h-100">
-            <div className="col-4 mx-auto">
+            <div class="row align-items-center h-100">
+              <div className="col-4 mx-auto">
                 <h1>Quiz completed</h1>
                 <div class="row">
                   <div class="card">
-                 
                     <div class="card-body">
                       <h5 class="card-title">CSCI48 Data Analytics</h5>
                       <p class="card-text">
-                      <h2>Final marks : {this.state.marks +1}</h2>
+                        <h2>Final marks : {this.state.marks + 1}</h2>
                       </p>
                       <ul class="list-group list-group-flush">
                         <li class="list-group-item">Grade : A</li>
                         <li class="list-group-item">Time taken : 15:20</li>
                       </ul>
                       <Link class="btn btn-outline-primary active" to="/">
-                  Back to Home
-                </Link>
+                        Back to Home
+                      </Link>
                     </div>
                   </div>
                 </div>
-
-                
               </div>
             </div>
           </div>
@@ -151,9 +149,9 @@ class Quiz extends Component {
       <div className="home">
         <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
           <div class="container-fluid">
-          <Link class="navbar-brand" to= "/">
-                <img src={require("./logo.png")} />
-              </Link>
+            <Link class="navbar-brand" to="/">
+              <img src={require("./logo.png")} />
+            </Link>
             <button
               class="navbar-toggler"
               type="button"
@@ -183,10 +181,10 @@ class Quiz extends Component {
                   </Link>
                 </li>
                 <li class="nav-item active">
-                <Link class="nav-link" to="/quiz">
+                  <Link class="nav-link" to="/quiz">
                     {" "}
                     Quiz
-                    </Link>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -199,10 +197,7 @@ class Quiz extends Component {
               <hr class="my-4" />
               <h2>{question}</h2>
               <hr class="my-4" />
-
-              {options.map((
-                option
-              ) => (
+              {options.map((option) => (
                 <p
                   key={option.id}
                   className={`options ${

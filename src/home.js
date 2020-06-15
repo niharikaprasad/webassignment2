@@ -64,7 +64,7 @@ class Home extends Component {
             </div>
           </div>
         </div>
-
+        {/* Author Drew Ryan, Responsive Bootstrap Website Start To Finish with Bootstrap 4, HTML5 & CSS3, Apr 3, 2020. Accessed on: June. 13, 2020. [Video file]. Available: https://www.youtube.com/watch?v=9cKsq14Kfsw */}
         <div class="container-fluid row jumbotron">
           <p class="lead text-center padding">
             Welcome to Quizapp, QuizApp is a collaborative learning management
@@ -111,6 +111,7 @@ class Home extends Component {
           </div>
         </figure>
 
+{/* Drew Ryan, Responsive Bootstrap Website Start To Finish with Bootstrap 4, HTML5 & CSS3, Apr 3, 2020. Accessed on: June. 13, 2020. [Video file]. Available: https://www.youtube.com/watch?v=9cKsq14Kfsw */}
         <div class="contianer-fluid padding">
           <div class="row text-center padding">
             <div class="col-12">
