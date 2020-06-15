@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import $ from 'jquery'; 
+import "bootstrap/js/src/collapse.js";
+
 
 class Home extends Component {
   render() {
@@ -7,13 +10,13 @@ class Home extends Component {
       <div className="home">
         <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-              <img src={require("./logo.png")} />
-            </a>
+          <Link class="navbar-brand" to= "/">
+                <img src={require("./logo.png")} />
+              </Link>
             <button
               class="navbar-toggler"
               type="button"
-              data-toggler="collapse"
+              data-toggle="collapse"
               data-target="#navbarNav"
             >
               <span class="navbar-toggler-icon"></span>
@@ -138,7 +141,7 @@ class Home extends Component {
                 6050 University Ave, Halifax, NS B3H 4R2, Canada
               </li>
               <li class="email">info@quizapp.com</li>
-              <a href="https://fb.me/droptheshop" class="text-center">
+              <a href="#" class="text-center">
                 <span class="icon-facebook"></span>
               </a>
             </ul>

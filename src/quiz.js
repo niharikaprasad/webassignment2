@@ -5,16 +5,16 @@ import "./quiz.css";
 
 class Quiz extends Component {
   state = {
-    userAnswer: null, //current users answer
-    currentIndex: 0, //current questions index
-    options: [], //the four options
-    quizEnd: false, //True if it's the last question
-    marks: 0, //the Score
+    userAnswer: null, 
+    currentIndex: 0,
+    options: [], 
+    quizEnd: false, 
+    marks: 0,
     disabled: true,
   };
 
   loadQuiz = () => {
-    const { currentIndex } = this.state; //get the current index
+    const { currentIndex } = this.state;
     this.setState(() => {
       return {
         question: QuizData[currentIndex].question,
@@ -30,7 +30,6 @@ class Quiz extends Component {
       currentIndex: this.state.currentIndex + 1,
     });
 
-    //Check for correct answer and increment score
     if (userAnswer === answer) {
       this.setState({
         marks: marks + 1,
@@ -77,9 +76,9 @@ class Quiz extends Component {
         <div className="home">
           <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">
+              <Link class="navbar-brand" to= "/">
                 <img src={require("./logo.png")} />
-              </a>
+              </Link>
               <button
                 class="navbar-toggler"
                 type="button"
@@ -119,21 +118,32 @@ class Quiz extends Component {
             </div>
           </nav>
           <div className="container h-100">
-            <div class="row align-items-center h-100">
-              <div className="col-6 mx-auto">
-                <h1>Quiz attempted</h1>
-                <h2>Final marks : {this.state.marks}</h2>
-                <p>The correct Answers for the quiz are</p>
-                <ul>
-                  {QuizData.map((item, index) => (
-                    <li className="options" key={index}>
-                      {item.answer}
-                    </li>
-                  ))}
-                </ul>
-                <Link class="btn btn-outline-primary active" to="/">
+          <div class="row align-items-center h-100">
+            <div className="col-4 mx-auto">
+                <h1>Quiz completed</h1>
+                <div class="row">
+                  <div class="card">
+                    {/* <img
+                      class="card-img-top"
+                      src={require("./datacard.jpg")}
+                    /> */}
+                    <div class="card-body">
+                      <h5 class="card-title">CSCI48 Data Analytics</h5>
+                      <p class="card-text">
+                      <h2>Final marks : {this.state.marks}</h2>
+                      </p>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Grade : A</li>
+                        <li class="list-group-item">Time taken : 15:20</li>
+                      </ul>
+                      <Link class="btn btn-outline-primary active" to="/">
                   Back to Home
                 </Link>
+                    </div>
+                  </div>
+                </div>
+
+                
               </div>
             </div>
           </div>
@@ -144,9 +154,9 @@ class Quiz extends Component {
       <div className="home">
         <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-              <img src={require("./logo.png")} />
-            </a>
+          <Link class="navbar-brand" to= "/">
+                <img src={require("./logo.png")} />
+              </Link>
             <button
               class="navbar-toggler"
               type="button"
@@ -195,7 +205,7 @@ class Quiz extends Component {
                 QuizData.length
               }`}</span>
               {options.map((
-                option //for each option, new paragraph
+                option
               ) => (
                 <p
                   key={option.id}
@@ -208,7 +218,6 @@ class Quiz extends Component {
                 </p>
               ))}
               {currentIndex < QuizData.length - 1 && (
-                // Next button only displays if the above is true
                 <button
                   className=" btn btn-outline-primary active"
                   disabled={this.state.disabled}

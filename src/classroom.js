@@ -8,9 +8,9 @@ class Classroom extends Component {
       <div className="home">
         <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-              <img src={require("./logo.png")} />
-            </a>
+          <Link class="navbar-brand" to= "/">
+                <img src={require("./logo.png")} />
+              </Link>
             <button
               class="navbar-toggler"
               type="button"
@@ -59,7 +59,6 @@ class Classroom extends Component {
                     <img
                       class="card-img-top"
                       src={require("./datacard.jpg")}
-                      alt="Card image"
                     />
                     <div class="card-body">
                       <h5 class="card-title">CSCI48 Data Analytics</h5>
@@ -81,7 +80,6 @@ class Classroom extends Component {
                     <img
                       class="card-img-top"
                       src={require("./webcard.jpg")}
-                      alt="Card image"
                     />
                     <div class="card-body">
                       <h5 class="card-title">CSCI88 Web development</h5>
