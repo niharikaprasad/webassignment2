@@ -1,0 +1,41 @@
+
+
+.selected {
+    background:#b7d3e8!important;
+    color: white;
+}
+
+.options {
+    padding: 8px;
+    border: 1px solid #0b4d7d;
+    border-radius: 15px;
+    cursor: pointer;
+    width:100%;
+    background-color: white;
+    color:#0b4d7d;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin: 5px;
+}
+
+.quizContainer{
+    display: flex;
+    justify-content: center;    
+    color:white;
+    font-size: 18px;
+    background-color: #c0e9eb;
+}
+/* body{
+    display: flex;
+    justify-content: center;    
+    color:white;
+    font-family: 'Segoe UI',;
+    font-size: 18px;
+    background-color: #c0e9eb;
+ } */
